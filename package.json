@@ -1,0 +1,45 @@
+{
+	"name": "hypixel-guild-chat-ts",
+	"version": "1.0.0",
+	"main": "dist",
+	"author": "EvernoteMC/xMdb",
+	"license": "MIT",
+	"private": false,
+	"scripts": {
+		"lint": "eslint \"src/**\"",
+		"lint:fix": "yarn lint --fix",
+		"format": "prettier --write \"src/**\"",
+		"prepare": "husky install",
+		"dev": "ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
+		"dev:server": "ts-node-dev --respawn --transpile-only --poll ./src/api/app.ts",
+		"start": "node ."
+	},
+	"dependencies": {
+		"consola": "^2.15.3",
+		"discord.js": "^13.1.0",
+		"dotenv": "^10.0.0",
+		"fastify": "^3.20.2",
+		"limiter": "^2.1.0",
+		"mineflayer": "^3.9.0",
+		"ts-node-dev": "^1.1.8"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^4.29.1",
+		"@typescript-eslint/parser": "^4.29.1",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"husky": "^7.0.1",
+		"lint-staged": "^11.1.2",
+		"prettier": "^2.3.2",
+		"typescript": "^4.3.5"
+	},
+	"engines": {
+		"node": ">=16.6.0"
+	},
+	"lint-staged": {
+		"*.ts": [
+			"yarn lint",
+			"yarn format"
+		]
+	}
+}
