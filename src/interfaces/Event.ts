@@ -6,6 +6,5 @@ export interface Event {
 }
 
 export interface Execute {
-	// eslint-disable-line @typescript-eslint/no-explicit-any
-	(client: Client, ...params: any[]): Promise<unknown>;
+	(client: Client, ...params: any[]): Promise<unknown>; // eslint-disable-line @typescript-eslint/no-explicit-any
 }
