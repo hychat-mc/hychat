@@ -97,15 +97,15 @@ export default {
 	 * Returns:
 	 *  - Tier Completed
 	 */
-	questTierComplete: /^\s{4}The guild has completed Tier (\d*) of this week's Guild Quest!$/,
+	questTierComplete: /^\s{17}GUILD QUEST TIER (\d*) COMPLETED!$/,
 
 	/**
 	 * When all guild quest tiers are complete
 	 */
-	questComplete: /^\s{11}The guild has completed this week's Guild Quest!$/,
+	questComplete: /^\s{17}GUILD QUEST COMPLETED!$/,
 
 	/**
 	 * When the bot detects its not in limbo
 	 */
-	lobbyJoin: /^(?:\s>>>\s)?\[.*]\s\w{2,17} joined the lobby!(?:\s<<<)?$/,
+	lobbyJoin: /^(?:\s>>>\s)?\[.*]\s[\w]{2,17} (?:joined the lobby!|spooked into the lobby!)(?:\s<<<)?$/,
 };
