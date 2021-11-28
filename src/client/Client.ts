@@ -18,9 +18,11 @@ class Bot extends Client {
 		username: process.env.MINECRAFT_EMAIL as string,
 		password: process.env.MINECRAFT_PASSWORD,
 		host: 'mc.hypixel.net',
-		version: '1.8.9',
+		version: '1.16.4',
 		logErrors: true,
+		hideErrors: false,
 		auth: process.env.MINECRAFT_AUTH === 'microsoft' ? 'microsoft' : 'mojang',
+		checkTimeoutInterval: 30000,
 	});
 	private limiter = new RateLimiter({ tokensPerInterval: 1, interval: 500 });
 
