@@ -1,23 +1,43 @@
 {
-    "compilerOptions": {
-        "lib": ["es2020"],
-        "module": "commonjs",
-        "target": "es2019",
-        "outDir": "dist",
-        "skipLibCheck": true,
-        "moduleResolution": "node",
-        "noImplicitAny": true,
-        "alwaysStrict": true,
-        "strict": true,
-        "sourceMap": false,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "declaration": false,
-        "forceConsistentCasingInFileNames": true,
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "resolveJsonModule": true
-    },
-    "include": ["src"],
-    "exclude": ["dist", "node_modules", "**/*.spec.ts"]
+	"compilerOptions": {
+		"lib": ["es2020"],
+		"module": "esnext",
+		"target": "es2019",
+		"noImplicitAny": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"outDir": "dist",
+
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"strict": true,
+		"alwaysStrict": true,
+		"strictNullChecks": true,
+		"noUncheckedIndexedAccess": true,
+
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"allowUnreachableCode": false,
+		"noFallthroughCasesInSwitch": true,
+
+		"declaration": true,
+		"sourceMap": true,
+
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"allowJs": false,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+
+		"jsx": "preserve",
+		"noEmit": true,
+		"isolatedModules": true,
+		"incremental": true
+	},
+	"exclude": ["dist", "./node_modules/**/*", "**/*.spec.ts"],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
