@@ -25,7 +25,7 @@
 		"fastify": "^3.24.0",
 		"limiter": "^2.1.0",
 		"mineflayer": "^3.11.2",
-		"next": "^12.0.4",
+		"next": "^12.0.5",
 		"next-seo": "^4.28.1",
 		"rate-limiter-flexible": "^2.3.6",
 		"react": "^17.0.2",
