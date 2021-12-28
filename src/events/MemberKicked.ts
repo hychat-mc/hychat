@@ -8,4 +8,6 @@ export const run: Execute = async (
 	playerName: string,
 	kickedByHypixelRank: string | null,
 	kickedByPlayerName: string,
-) => {};
+) => {
+	client.hook.send(`${hypixelRank ?? ''} ${playerName} was kicked by ${kickedByHypixelRank ?? ''} ${kickedByPlayerName}`);
+};

@@ -1,5 +1,5 @@
 import { Execute } from '../interfaces/Event';
-import { ChatMessage } from 'mineflayer';
+import { ChatMessage } from 'prismarine-chat';
 
 export const name = 'message';
 

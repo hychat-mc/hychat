@@ -1,4 +1,5 @@
 import { Execute } from '../interfaces/Event';
+import { Util } from 'discord.js';
 
 export const name = 'chat:guildChat';
 
@@ -10,11 +11,6 @@ export const run: Execute = async (
 	guildRank: string | null,
 	message: string,
 ) => {
-	console.log({
-		channel,
-		hypixelRank,
-		playerName,
-		guildRank,
-		message,
-	});
+	if (playerName === client.mineflayer.username) return;
+	client.hook.send(`${channel} **${hypixelRank ?? ''} ${playerName}${guildRank ?? ''}**: ${Util.escapeMarkdown(message)}`);
 };
