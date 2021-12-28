@@ -3,10 +3,10 @@ import { createBot } from 'mineflayer';
 import consola from 'consola';
 import fs from 'fs/promises';
 import path from 'path';
-import { EventEmitter } from 'events';
 import { RateLimiter } from 'limiter';
 
 import { Event } from '../interfaces/Event';
+import { EventEmitter } from 'stream';
 
 class Bot extends Client {
 	public onlineCount = 0;
@@ -43,7 +43,7 @@ class Bot extends Client {
 		this.mineflayer.chat(message);
 	}
 
-	private async loadEvents(dir = '../events', emitter: any) {
+	private async loadEvents(dir = '../events', emitter: EventEmitter) {
 		const files = await fs.readdir(path.join(__dirname, dir));
 
 		for (const file of files) {
