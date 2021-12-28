@@ -1,4 +1,4 @@
-import { Execute } from '../../interfaces/Event';
+import { Execute } from '../interfaces/Event';
 import { ChatMessage } from 'mineflayer';
 
 export const name = 'message';

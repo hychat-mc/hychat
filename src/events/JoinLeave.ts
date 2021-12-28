@@ -1,5 +1,5 @@
-import { Execute } from '../../interfaces/Event';
-import Emojis from '../../util/Emojis';
+import { Execute } from '../interfaces/Event';
+import Emojis from '../util/Emojis';
 
 export const name = 'chat:joinLeave';
 
