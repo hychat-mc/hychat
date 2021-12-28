@@ -1,46 +1,16 @@
-# Hypixel Guild Chat Bot 2.0 (TS)
+# Dashboard UI & API
 
-[![Commit Activity](https://img.shields.io/github/commit-activity/w/xMdb/hypixel-guild-chat-ts)](https://github.com/xMdb/hypixel-guild-chat-ts/commits/main/)
+> This component is a work in progress! 
 
-This application is a WIP, and is the "2nd edition" to [Hypixel Guild Chat Bot](https://github.com/xMdb/hypixel-guild-chat-bot).
+The dashboard uses Next.js and TailwindCSS to create an interactive dashboard to manage Hypixel bot(s) and view chat logs. It also fetches messages from a back-end using an API (found in `src/pages/api`).
 
-2.0 was created by [EvernoteMC](https://github.com/EvernoteMC), which is a semi-fork of Hypixel Guild Chat Bot. I (xMdb) will be maintaining the bot and its code, as Evernote is currently on academic break until April 2022.
+## Branches
 
-> ℹ️ This application will login to Hypixel using Mineflayer which is not a normal Minecraft client, this could result in your Minecraft account getting banned from Hypixel, so use this application at your own risk. I am not liable for any damages and no warranty is provided as outlined in the MIT License.
->
-> ⚠️ This application is currently in alpha, and is not guaranteed to be in a working state.
+This application is split into seperate components and organised into branches. A list of branches can be found below:
 
-## Table of Contents
-
-- [Hypixel Guild Chat Bot 2.0 (TS)](#hypixel-guild-chat-bot-20-ts)
-  - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
-    - [Setup Guide](#setup-guide)
-  - [Acknowledgements](#acknowledgements)
-  - [License](#license)
-
-<hr>
-
-## Installation
-
-### Setup Guide
-
-1. Fork and star this repo
-2. Clone it into your own directory using 
-```bash
-$ git clone https://github.com/xMdb/hypixel-guild-chat-ts.git
-```
-3. Install the required packages using 
-```bash
-$ cd hypixel-guild-chat-ts
-$ yarn install
-```
-4. Make a new Discord bot account on the [Discord Developer Portal](https://discord.com/developers/applications)
-5. Edit [.env.example](https://github.com/xMdb/hypixel-guild-chat-ts/blob/main/.env.example) to your liking, and rename it to `.env`.
-6. Start the bot using
-```bash
-$ yarn dev
-```
+- [~~🖥️ dashboard: Dashboard UI & API~~](https://github.com/xMdb/hypixel-guild-chat-ts/tree/dashboard)
+- [🤖 discord: Discord Bot](https://github.com/xMdb/hypixel-guild-chat-ts/tree/discord)
+- [⛏️ mineflayer: Hypixel Bot](https://github.com/xMdb/hypixel-guild-chat-ts/tree/mineflayer)
 
 ## Acknowledgements
 
