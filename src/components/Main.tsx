@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { DashConfig } from '../util/dashConfig';
+import { config } from '../util/config';
 
 interface IMainProps {
 	meta: ReactNode;
@@ -13,7 +13,7 @@ const Main = (props: IMainProps) => (
 		<div className="py-5 text-xl content">{props.children}</div>
 
 		<div className="text-center py-8 text-sm dark:text-white">
-			{DashConfig.title} licensed under the MIT license.
+			{config.title} licensed under the MIT license.
 		</div>
 	</div>
 );

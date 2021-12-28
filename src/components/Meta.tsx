@@ -2,7 +2,7 @@ import { NextSeo } from 'next-seo';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-import { DashConfig } from '../util/dashConfig';
+import { config } from '../util/config';
 
 type IMetaProps = {
 	title: string;
@@ -43,8 +43,8 @@ const Meta = (props: IMetaProps) => {
 					title: props.title,
 					description: props.description,
 					url: props.canonical,
-					locale: DashConfig.locale,
-					site_name: DashConfig.site_name,
+					locale: config.locale,
+					site_name: config.site_name,
 				}}
 			/>
 		</>
