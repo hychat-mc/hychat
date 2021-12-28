@@ -2,7 +2,7 @@
 
 > This component is a work in progress! 
 
-This component is mostly a fork/migration of code from [Hypixel Guild Chat Bot](https://github.com/xMdb/hypixel-guild-chat-bot), and adapted to TypeScript. It is written in a way that it can be scaled up easily to multiple users.
+This component is mostly a fork/migration of code from [Hypixel Guild Chat Bot](https://github.com/xMdb/hypixel-guild-chat-bot), and adapted to TypeScript. It is written in a way that it can be scaled up easily to multiple users. It is heavily integerated with the back-end database, and the Discord bot itself.
 
 ## Branches
 
