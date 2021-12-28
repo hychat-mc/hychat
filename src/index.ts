@@ -2,9 +2,7 @@
 import { config } from 'dotenv';
 config();
 
-// Initialize the bot class
-import Bot from './client/Client';
+import Bot from './client/Client.js'
 const bot = new Bot();
 
-// Export the bot to use elsewhere
 export default bot;

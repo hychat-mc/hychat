@@ -1,4 +1,4 @@
-import Client from '../client/Client';
+import Bot from "../client/Client";
 
 export interface Event {
 	name: string;
@@ -6,5 +6,5 @@ export interface Event {
 }
 
 export interface Execute {
-	(client: Client, ...params: any[]): Promise<unknown>; // eslint-disable-line @typescript-eslint/no-explicit-any
+	(client: Bot, ...params: any[]): Promise<unknown>; // eslint-disable-line @typescript-eslint/no-explicit-any
 }

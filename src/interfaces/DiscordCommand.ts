@@ -1,6 +1,5 @@
 import { CommandInteraction, Message } from 'discord.js';
-import Client from '../client/Client';
-import { Bot } from 'mineflayer';
+import Bot from '../client/Client';
 
 export interface Command {
 	name: string;
@@ -14,9 +13,9 @@ export interface Command {
 }
 
 export interface ExecuteCommand {
-	(client: Client, bot: Bot, message: Message, args: string[]): Promise<unknown>;
+	(client: Bot, message: Message, args: string[]): Promise<unknown>;
 }
 
 export interface ExecuteSlashCommand {
-	(client: Client, bot: Bot, interaction: CommandInteraction): Promise<unknown>;
+	(client: Bot, interaction: CommandInteraction): Promise<unknown>;
 }
