@@ -1,16 +1,24 @@
-# Discord Bot
-
-> This component is a work in progress! 
+# Welcome to Hypixel Guild Chat Bot 2.0 (TS)
 
 The Discord bot automatically manages webhooks and allows server admins to manage the bot's settings without logging into the dashboard.
+
+2.0 was created by [EvernoteMC](https://github.com/EvernoteMC), which is a semi-fork of Hypixel Guild Chat Bot. Jejebecarte and I (xMdb) will be developing the bot and adding new features, as Evernote is currently on academic break until April 2022.
 
 ## Branches
 
 This application is split into seperate components and organised into branches. A list of branches can be found below:
 
 - [🖥️ dashboard: Dashboard UI & API](https://github.com/xMdb/hypixel-guild-chat-ts/tree/dashboard)
-- [~~🤖 discord: Discord Bot~~](https://github.com/xMdb/hypixel-guild-chat-ts/tree/discord)
+- [🤖 discord: Discord Bot](https://github.com/xMdb/hypixel-guild-chat-ts/tree/discord)
 - [⛏️ mineflayer: Hypixel Bot](https://github.com/xMdb/hypixel-guild-chat-ts/tree/mineflayer)
+
+<hr>
+
+## Installation
+
+This application uses a Supabase (PostgreSQL) back-end and the components are meant to work together with the same database. If you wish to install a single component, see that component's README.
+
+If you wish to use a simplier version, see [Hypixel Guild Chat Bot](https://github.com/xMdb/hypixel-guild-chat-bot).
 
 ## Acknowledgements
 
