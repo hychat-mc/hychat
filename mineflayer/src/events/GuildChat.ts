@@ -1,4 +1,4 @@
-import { Execute } from '../../interfaces/Event';
+import { Execute } from '../interfaces/Event';
 import { Util } from 'discord.js';
 
 export const name = 'guildChat';
