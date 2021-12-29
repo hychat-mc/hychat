@@ -2,8 +2,8 @@ import { Execute } from '../../interfaces/Event';
 
 export const name = 'chat:lobbyJoin';
 
-export const run: Execute = async (client) => {
-	client.logger.warn('Detected that the bot is not in Limbo, sending illegal character.');
+export const run: Execute = async (bot) => {
+	bot.logger.warn('Detected that the bot is not in Limbo, sending illegal character.');
 
-	return client.executeCommand('/ac \u00a7');
+	return bot.executeCommand('/ac \u00a7');
 };

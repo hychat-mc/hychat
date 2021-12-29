@@ -40,7 +40,7 @@ class Bot {
 		this.mineflayer.chat(message);
 	}
 
-	private async loadEvents(dir = '../events', emitter: EventEmitter) {
+	private async loadEvents(dir: string, emitter: EventEmitter) {
 		const files = await fs.readdir(path.join(__dirname, dir));
 
 		for (const file of files) {

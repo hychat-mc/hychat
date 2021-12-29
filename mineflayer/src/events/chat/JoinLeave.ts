@@ -3,17 +3,17 @@ import Emojis from '../../util/Emojis';
 
 export const name = 'chat:joinLeave';
 
-export const run: Execute = async (client, playerName: string, status: 'joined' | 'left') => {
+export const run: Execute = async (bot, playerName: string, status: 'joined' | 'left') => {
 	if (status === 'joined') {
-		client.onlineCount++;
-		await client.hook.send({
+		bot.onlineCount++;
+		await bot.hook.send({
 			content: `${Emojis.join} ${playerName} joined`,
 		});
 	}
 
 	if (status === 'left') {
-		client.onlineCount--;
-		await client.hook.send({
+		bot.onlineCount--;
+		await bot.hook.send({
 			content: `${Emojis.leave} ${playerName} left`,
 		});
 	}

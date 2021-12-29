@@ -1,5 +1,5 @@
-import Client from '../classes/Client';
-import { Bot } from 'mineflayer';
+import Bot from '../classes/Bot';
+import Client from '../../../discord/src/client/Client';
 
 export interface Command {
 	name: string;

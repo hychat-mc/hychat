@@ -3,7 +3,7 @@ import { Execute } from '../../interfaces/Event';
 export const name = 'chat:promotedDemoted';
 
 export const run: Execute = async (
-	client,
+	bot,
 	hypixelRank: string | null,
 	playerName: string,
 	changeType: 'promoted' | 'demoted',
