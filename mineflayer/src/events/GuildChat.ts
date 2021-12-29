@@ -12,5 +12,6 @@ export const run: Execute = async (
 	message: string,
 ) => {
 	if (playerName === bot.mineflayer.username) return;
-	bot.hook.send(`${channel} **${hypixelRank ?? ''} ${playerName}${guildRank ?? ''}**: ${Util.escapeMarkdown(message)}`);
+	message = `${channel} **${hypixelRank ?? ''} ${playerName}${guildRank ?? ''}**: ${Util.escapeMarkdown(message)}`;
+	channel === 'Guild' ? bot.chatHook.send(message) : bot.officerChatHook.send(message);
 };

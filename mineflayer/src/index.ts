@@ -4,7 +4,8 @@ config();
 
 // Initialize the bot class
 import Bot from './classes/Bot';
-const bot = new Bot();
+// Normally the webhook would be passed by discord bot
+const bot = new Bot(process.env.WEBHOOK_URL as string, process.env.OFFICER_WEBHOOK_URL as string);
 
 // Export the bot to use elsewhere
 export default bot;

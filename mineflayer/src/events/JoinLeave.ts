@@ -6,14 +6,14 @@ export const name = 'chat:joinLeave';
 export const run: Execute = async (bot, playerName: string, status: 'joined' | 'left') => {
 	if (status === 'joined') {
 		bot.onlineCount++;
-		await bot.hook.send({
+		await bot.chatHook.send({
 			content: `${Emojis.join} ${playerName} joined`,
 		});
 	}
 
 	if (status === 'left') {
 		bot.onlineCount--;
-		await bot.hook.send({
+		await bot.chatHook.send({
 			content: `${Emojis.leave} ${playerName} left`,
 		});
 	}
