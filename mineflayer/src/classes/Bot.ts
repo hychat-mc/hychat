@@ -9,12 +9,15 @@ import { Event } from '../interfaces/Event';
 import { EventEmitter } from 'stream';
 
 class Bot {
-	public onlineCount = 0;
-	public totalCount = 125;
+	public static supabase = createClient(process.env.SUPABASE_URL as string, process.env.SUPABASE_KEY as string);
 
 	public logger = consola;
-	public hook = new WebhookClient({ url: process.env.WEBHOOK_URL as string });
+	public chatHook;
+	public officerChatHook;
+	// public APIHook; 
 	public devHook = new WebhookClient({ url: process.env.DEV_WEBHOOK_URL as string });
+	public onlineCount = 0;
+	public totalCount = 125;
 	public mineflayer = createBot({
 		username: process.env.MINECRAFT_EMAIL as string,
 		password: process.env.MINECRAFT_PASSWORD as string,
@@ -26,9 +29,9 @@ class Bot {
 		checkTimeoutInterval: 30000,
 	});
 
-	public supabase = createClient(process.env.SUPABASE_URL as string, process.env.SUPABASE_KEY as string);
-
-	constructor() {
+	constructor(chatHook: string, officerChatHook: string) {
+		this.chatHook = new WebhookClient({ url: chatHook });
+		this.officerChatHook = new WebhookClient({ url: officerChatHook });
 		this.start().catch(this.logger.error);
 	}
 

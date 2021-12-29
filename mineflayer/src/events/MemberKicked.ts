@@ -9,5 +9,5 @@ export const run: Execute = async (
 	kickedByHypixelRank: string | null,
 	kickedByPlayerName: string,
 ) => {
-	bot.hook.send(`${hypixelRank ?? ''} ${playerName} was kicked by ${kickedByHypixelRank ?? ''} ${kickedByPlayerName}`);
+	bot.chatHook.send(`${hypixelRank ?? ''} ${playerName} was kicked by ${kickedByHypixelRank ?? ''} ${kickedByPlayerName}`);
 };
