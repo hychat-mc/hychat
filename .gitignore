@@ -29,3 +29,7 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 .env
+
+# remove local deps
+yarn.lock
+package.json
