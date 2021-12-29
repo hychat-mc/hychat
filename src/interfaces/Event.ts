@@ -1,4 +1,4 @@
-import Client from '../client/Client';
+import Client from '../classes/Client';
 
 export interface Event {
 	name: string;

@@ -1,4 +1,4 @@
-import { Execute } from '../../interfaces/Event';
+import { Execute } from '../interfaces/Event';
 
 export const name = 'chat:promotedDemoted';
 
@@ -9,4 +9,6 @@ export const run: Execute = async (
 	changeType: 'promoted' | 'demoted',
 	guildRankFrom: string,
 	guildRankTo: string,
-) => {};
+) => {
+	console.log(hypixelRank, playerName, changeType, guildRankFrom, guildRankTo);
+};

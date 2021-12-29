@@ -1,36 +1,34 @@
-import { Client, Intents, WebhookClient } from 'discord.js';
+import { WebhookClient } from 'discord.js';
 import { createBot } from 'mineflayer';
+import { createClient } from '@supabase/supabase-js';
 import consola from 'consola';
 import fs from 'fs/promises';
 import path from 'path';
-import { RateLimiter } from 'limiter';
 
 import { Event } from '../interfaces/Event';
 import { EventEmitter } from 'stream';
 
-class Bot extends Client {
+class Bot {
 	public onlineCount = 0;
 	public totalCount = 125;
 
 	public logger = consola;
 	public hook = new WebhookClient({ url: process.env.WEBHOOK_URL as string });
+	public devHook = new WebhookClient({ url: process.env.DEV_WEBHOOK_URL as string });
 	public mineflayer = createBot({
 		username: process.env.MINECRAFT_EMAIL as string,
-		password: process.env.MINECRAFT_PASSWORD,
+		password: process.env.MINECRAFT_PASSWORD as string,
 		host: 'mc.hypixel.net',
 		version: '1.16.4',
 		logErrors: true,
 		hideErrors: false,
-		auth: process.env.MINECRAFT_AUTH === 'microsoft' ? 'microsoft' : 'mojang',
+		auth: 'microsoft',
 		checkTimeoutInterval: 30000,
 	});
-	private limiter = new RateLimiter({ tokensPerInterval: 1, interval: 500 });
+
+	public supabase = createClient(process.env.SUPABASE_URL as string, process.env.SUPABASE_KEY as string);
 
 	constructor() {
-		super({
-			intents: [Intents.FLAGS.GUILD_MESSAGES],
-		});
-
 		this.start().catch(this.logger.error);
 	}
 
@@ -39,7 +37,6 @@ class Bot extends Client {
 	}
 
 	public async executeCommand(message: string): Promise<void> {
-		await this.limiter.removeTokens(1);
 		this.mineflayer.chat(message);
 	}
 
@@ -67,7 +64,8 @@ class Bot extends Client {
 					}
 
 					emitter.on(name, run.bind(null, this));
-				} catch (e) {
+					// eslint-disable-next-line @typescript-eslint/no-explicit-any
+				} catch (e: any) {
 					console.warn(`Error while loading events: ${e.message}`);
 				}
 			}
@@ -76,9 +74,7 @@ class Bot extends Client {
 
 	private async start() {
 		this.mineflayer.setMaxListeners(20);
-		await this.loadEvents('../events/discord', this);
 		await this.loadEvents('../events/mineflayer', this.mineflayer);
-		await this.login(process.env.BOT_TOKEN);
 	}
 }
 

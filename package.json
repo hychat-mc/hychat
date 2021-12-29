@@ -1,5 +1,5 @@
 {
-	"name": "hypixel-guild-chat-ts",
+	"name": "hgb-mineflayer",
 	"version": "1.0.0",
 	"main": "dist",
 	"author": "EvernoteMC/xMdb",
@@ -9,45 +9,25 @@
 		"lint": "eslint \"src/**\"",
 		"lint:fix": "yarn lint --fix",
 		"format": "prettier --write \"src/**\"",
-		"prepare": "husky install",
 		"dev": "ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
-		"dev:server": "next dev",
 		"build": "tsc",
-		"build:server": "next build",
-		"start": "node .",
-		"start:server": "next start"
+		"start": "node ."
 	},
 	"dependencies": {
+		"@supabase/supabase-js": "^1.29.1",
 		"consola": "^2.15.3",
-		"cors": "^2.8.5",
 		"discord.js": "^13.3.1",
 		"dotenv": "^10.0.0",
-		"fastify": "^3.24.0",
-		"limiter": "^2.1.0",
 		"mineflayer": "^3.11.2",
-		"next": "^12.0.5",
-		"next-seo": "^4.28.1",
-		"rate-limiter-flexible": "^2.3.6",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
-		"swr": "^1.1.0",
 		"ts-node-dev": "^1.1.8"
 	},
 	"devDependencies": {
-		"@types/cors": "^2.8.12",
 		"@types/node": "^16.11.11",
-		"@types/react": "^17.0.37",
 		"@typescript-eslint/eslint-plugin": "^5.4.0",
 		"@typescript-eslint/parser": "^5.4.0",
-		"autoprefixer": "^10.4.0",
 		"eslint": "^8.3.0",
 		"eslint-config-prettier": "^8.3.0",
-		"husky": "^7.0.4",
-		"lint-staged": "^12.1.2",
-		"postcss": "^8.4.4",
-		"prettier": "^2.4.1",
-		"tailwindcss": "^2.2.19",
-		"typescript": "^4.5.2"
+		"prettier": "^2.4.1"
 	},
 	"engines": {
 		"node": ">=16.6.0"

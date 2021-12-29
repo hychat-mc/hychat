@@ -1,5 +1,5 @@
-import { Execute } from '../../interfaces/Event';
-import regex from '../../util/Regex';
+import { Execute } from '../interfaces/Event';
+import regex from '../util/Regex';
 
 export const name = 'spawn';
 
