@@ -4,13 +4,13 @@ This application is a WIP, and is the "2nd edition" to [Hypixel Guild Chat Bot](
 
 2.0 was created by [EvernoteMC](https://github.com/EvernoteMC), which is a semi-fork of Hypixel Guild Chat Bot. Jejebecarte and I (xMdb) will be developing the bot and adding new features, as Evernote is currently on academic break until April 2022.
 
-## Branches
+## Workspace Layout
 
-This application is split into seperate components and organised into branches. A list of branches can be found below:
+This application is split into separate components and organized into folders. A list of folders can be found below:
 
-- [🖥️ dashboard: Dashboard UI & API](https://github.com/xMdb/hypixel-guild-chat-ts/tree/dashboard)
-- [🤖 discord: Discord Bot](https://github.com/xMdb/hypixel-guild-chat-ts/tree/discord)
-- [⛏️ mineflayer: Hypixel Bot](https://github.com/xMdb/hypixel-guild-chat-ts/tree/mineflayer)
+- [🖥️ dashboard: Dashboard UI & API](https://github.com/xMdb/hypixel-guild-chat-ts/tree/master/dashboard)
+- [🤖 discord: Discord Bot](https://github.com/xMdb/hypixel-guild-chat-ts/tree/master/discord)
+- [⛏️ mineflayer: Hypixel Bot](https://github.com/xMdb/hypixel-guild-chat-ts/tree/master/mineflayer)
 
 <hr>
 

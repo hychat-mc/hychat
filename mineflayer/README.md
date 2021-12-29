@@ -4,13 +4,13 @@
 
 This component is mostly a fork/migration of code from [Hypixel Guild Chat Bot](https://github.com/xMdb/hypixel-guild-chat-bot), and adapted to TypeScript. It is written in a way that it can be scaled up easily to multiple users. It is heavily integerated with the back-end database, and the Discord bot itself.
 
-## Branches
+## Workspace Layout
 
-This application is split into seperate components and organised into branches. A list of branches can be found below:
+This application is split into separate components and organized into folders. A list of folders can be found below:
 
-- [🖥️ dashboard: Dashboard UI & API](https://github.com/xMdb/hypixel-guild-chat-ts/tree/dashboard)
-- [🤖 discord: Discord Bot](https://github.com/xMdb/hypixel-guild-chat-ts/tree/discord)
-- [~~⛏️ mineflayer: Hypixel Bot~~](https://github.com/xMdb/hypixel-guild-chat-ts/tree/mineflayer)
+- [🖥️ dashboard: Dashboard UI & API](https://github.com/xMdb/hypixel-guild-chat-ts/tree/master/dashboard)
+- [🤖 discord: Discord Bot](https://github.com/xMdb/hypixel-guild-chat-ts/tree/master/discord)
+- [~~⛏️ mineflayer: Hypixel Bot~~](https://github.com/xMdb/hypixel-guild-chat-ts/tree/master/mineflayer)
 
 ## Acknowledgements
 
