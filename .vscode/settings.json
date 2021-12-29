@@ -3,6 +3,7 @@
         "regex",
         "db",
         "webhook",
-        "workspace"
+        "workspace",
+        "events"
     ]
 }
