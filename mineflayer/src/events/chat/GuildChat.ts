@@ -1,7 +1,7 @@
 import { Execute } from '../../interfaces/Event';
 import { Util } from 'discord.js';
 
-export const name = 'chat:guildChat';
+export const name = 'guildChat';
 
 export const run: Execute = async (
 	bot,

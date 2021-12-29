@@ -1,6 +1,6 @@
 import { Execute } from '../../interfaces/Event';
 
-export const name = 'chat:promotedDemoted';
+export const name = 'promotedDemoted';
 
 export const run: Execute = async (
 	bot,
