@@ -74,8 +74,7 @@ class Bot {
 
 	private async start() {
 		this.mineflayer.setMaxListeners(20);
-		await this.loadEvents('../events/chat', this.mineflayer);
-		await this.loadEvents('../events/handler', this.mineflayer);
+		await this.loadEvents('../events', this.mineflayer);
 	}
 }
 

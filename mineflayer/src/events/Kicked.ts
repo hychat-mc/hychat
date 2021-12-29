@@ -1,6 +1,6 @@
-import { Execute } from '../../interfaces/Event';
+import { Execute } from '../interfaces/Event';
 
-export const name = 'kicked';
+export const name = 'chat:kicked';
 
 export const run: Execute = async (bot, reason: string, loggedIn: boolean) => {
 	bot.logger.warn(
