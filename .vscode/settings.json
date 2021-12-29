@@ -1,0 +1,8 @@
+{
+    "conventionalCommits.scopes": [
+        "regex",
+        "db",
+        "webhook",
+        "workspace"
+    ]
+}
