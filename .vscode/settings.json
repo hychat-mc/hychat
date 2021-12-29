@@ -4,6 +4,7 @@
         "db",
         "webhook",
         "workspace",
-        "events"
+        "events",
+        "types"
     ]
 }
