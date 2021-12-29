@@ -1,7 +1,7 @@
 import { Execute } from '../interfaces/Event';
 import Emojis from '../util/Emojis';
 
-export const name = 'joinLeave';
+export const name = 'chat:joinLeave';
 
 export const run: Execute = async (bot, playerName: string, status: 'joined' | 'left') => {
 	if (status === 'joined') {

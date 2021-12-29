@@ -1,7 +1,7 @@
 import { Execute } from '../interfaces/Event';
 import { MessageEmbed } from 'discord.js';
 
-export const name = 'questComplete';
+export const name = 'chat:questComplete';
 
 export const run: Execute = async (bot) => {
 	const embed = new MessageEmbed()
