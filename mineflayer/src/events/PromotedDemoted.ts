@@ -10,5 +10,5 @@ export const run: Execute = async (
 	guildRankFrom: string,
 	guildRankTo: string,
 ) => {
-	console.log(hypixelRank, playerName, changeType, guildRankFrom, guildRankTo);
+	bot.logger.log(hypixelRank, playerName, changeType, guildRankFrom, guildRankTo);
 };
