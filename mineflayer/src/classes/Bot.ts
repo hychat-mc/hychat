@@ -14,7 +14,7 @@ class Bot {
 	public logger = consola;
 	public chatHook;
 	public officerChatHook;
-	// public APIHook; 
+	// public APIHook;
 	public devHook = new WebhookClient({ url: process.env.DEV_WEBHOOK_URL as string });
 	public onlineCount = 0;
 	public totalCount = 125;
@@ -67,7 +67,6 @@ class Bot {
 					}
 
 					emitter.on(name, run.bind(null, this));
-					// eslint-disable-next-line @typescript-eslint/no-explicit-any
 				} catch (e: any) {
 					console.warn(`Error while loading events: ${e.message}`);
 				}
