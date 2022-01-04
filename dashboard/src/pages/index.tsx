@@ -6,8 +6,8 @@ const Index = () => {
 		<Main
 			meta={
 				<Meta
-					title="Mineflayer Bot Dashboard"
-					description="A dashboard that allows you to easily manage your Mineflayer bot"
+					title="HGB Dashboard"
+					description="Easily create your own Hypixel Guild Chat Bot."
 				/>
 			}>
 			<h1>Hello World</h1>
