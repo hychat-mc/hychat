@@ -67,6 +67,7 @@ class Bot {
 					}
 
 					emitter.on(name, run.bind(null, this));
+					// eslint-disable-next-line @typescript-eslint/no-explicit-any
 				} catch (e: any) {
 					console.warn(`Error while loading events: ${e.message}`);
 				}
