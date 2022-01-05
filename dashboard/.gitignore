@@ -13,6 +13,9 @@
 # misc
 .DS_Store
 
+# vs code
+/.vscode/
+
 # debug
 *npm-debug.log*
 *yarn-debug.log*

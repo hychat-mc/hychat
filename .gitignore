@@ -14,7 +14,7 @@
 .DS_Store
 
 # vs code
-.vscode/
+/.vscode/
 
 # debug
 *npm-debug.log*
