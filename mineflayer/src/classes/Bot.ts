@@ -26,7 +26,7 @@ class Bot {
 		version: '1.16.4',
 		logErrors: true,
 		hideErrors: false,
-		auth: process.env.MINECRAFT_AUTH as 'microsoft' | 'mojang',
+		auth: process.env.MINECRAFT_AUTH_TYPE as 'microsoft' | 'mojang',
 		checkTimeoutInterval: 30000,
 		defaultChatPatterns: false,
 	});
