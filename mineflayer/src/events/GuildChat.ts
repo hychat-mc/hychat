@@ -1,17 +1,16 @@
 import { Execute } from '../interfaces/Event';
 import { Util } from 'discord.js';
+import { ChatMessage } from 'prismarine-chat';
 
 export const name = 'chat:guildChat';
 
 export const run: Execute = async (
-	bot,
-	channel: 'Guild' | 'Officer',
-	hypixelRank: string | null,
-	playerName: string,
-	guildRank: string | null,
-	message: string,
+	bot, message: ChatMessage
 ) => {
-	if (playerName === bot.mineflayer.username) return;
-	message = `${channel} **${hypixelRank ?? ''} ${playerName}${guildRank ?? ''}**: ${Util.escapeMarkdown(message)}`;
-	channel === 'Guild' ? bot.chatHook.send(message) : bot.officerChatHook.send(message);
+	// ${Util.escapeMarkdown(message)} 
+	const splitMessageArray = message.toString().split(',');
+	console.log(splitMessageArray)
+	if (splitMessageArray[2] === bot.mineflayer.username) return;
+	const formattedMessage = `channel: ${splitMessageArray[0]} rank: **${splitMessageArray[1] ?? ''} name: ${splitMessageArray[2]}${splitMessageArray[3] ?? ''}**: message: ${splitMessageArray[4]}`;
+	splitMessageArray[0] === 'Guild' ? bot.chatHook.send(formattedMessage) : bot.officerChatHook.send(formattedMessage);
 };

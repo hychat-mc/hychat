@@ -5,6 +5,7 @@
         "webhook",
         "workspace",
         "events",
-        "types"
+        "types",
+        "docker"
     ]
 }

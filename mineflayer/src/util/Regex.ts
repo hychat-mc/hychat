@@ -22,7 +22,7 @@ export default {
 	 *  - Guild Rank
 	 *  - Message
 	 */
-	guildChat: /^(Guild|Officer) > (\[.*]\s*)?(\w{2,17}).*?(\[.{1,15}])?: (.*)$/,
+	guildChat: /^(Guild|Officer) > (\[.+?\])? ?([A-Za-z0-9_]{3,16}) (\[.+\]): (.+)/,
 
 	/**
 	 * When a member connects to or disconnects from Hypixel
