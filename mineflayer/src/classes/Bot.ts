@@ -42,7 +42,7 @@ class Bot {
 		this.mineflayer.chat(message);
 	}
 
-	private async loadEvents(dir = '../events/handler', emitter: EventEmitter) {
+	private async loadEvents(dir = '../events', emitter: EventEmitter) {
 		const files = await fs.readdir(path.join(__dirname, dir));
 
 		for (const file of files) {
@@ -76,7 +76,7 @@ class Bot {
 
 	private async start() {
 		this.mineflayer.setMaxListeners(20);
-		await this.loadEvents('../events/handler', this.mineflayer);
+		await this.loadEvents('../events', this.mineflayer);
 	}
 }
 
