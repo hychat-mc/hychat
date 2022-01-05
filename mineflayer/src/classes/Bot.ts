@@ -1,5 +1,5 @@
 import { WebhookClient } from 'discord.js';
-import { createBot } from 'mineflayer';
+import { chatPatternOptions, createBot } from 'mineflayer';
 import { createClient } from '@supabase/supabase-js';
 import consola from 'consola';
 import fs from 'fs/promises';
@@ -7,6 +7,7 @@ import path from 'path';
 
 import { Event } from '../interfaces/Event';
 import { EventEmitter } from 'stream';
+import regex from '../util/Regex';
 
 class Bot {
 	public static supabase = createClient(process.env.SUPABASE_URL as string, process.env.SUPABASE_KEY as string);
@@ -24,7 +25,7 @@ class Bot {
 		host: 'mc.hypixel.net',
 		version: '1.16.4',
 		logErrors: true,
-		hideErrors: false,
+		hideErrors: true,
 		auth: process.env.MINECRAFT_AUTH as string,
 		checkTimeoutInterval: 30000,
 		defaultChatPatterns: false,
@@ -72,6 +73,20 @@ class Bot {
 				}
 			}
 		}
+
+		const options: chatPatternOptions = { repeat: true, parse: true };
+
+		this.mineflayer.addChatPattern('guildChat', regex.guildChat, options);
+		this.mineflayer.addChatPattern('joinLeave', regex.joinLeave, options);
+		this.mineflayer.addChatPattern('memberCount', regex.memberCount, options);
+		this.mineflayer.addChatPattern('memberJoin', regex.memberJoin, options);
+		this.mineflayer.addChatPattern('memberLeave', regex.memberLeave, options);
+		this.mineflayer.addChatPattern('memberKicked', regex.memberKicked, options);
+		this.mineflayer.addChatPattern('promotedDemoted', regex.promotedDemoted, options);
+		this.mineflayer.addChatPattern('guildLevelUp', regex.guildLevelUp, options);
+		this.mineflayer.addChatPattern('questTierComplete', regex.questTierComplete, options);
+		this.mineflayer.addChatPattern('questComplete', regex.questComplete, options);
+		this.mineflayer.addChatPattern('lobbyJoin', regex.lobbyJoin, options);
 	}
 
 	private async start() {
