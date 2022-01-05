@@ -32,7 +32,12 @@ class Bot {
 	});
 
 	constructor() {
-		this.start().catch(this.logger.error);
+		try {
+			this.start();
+		} catch (error) {
+			this.logger.error(error);
+			this.devHook.send(`:exclamation: **Mineflayer Component Error** \`\`\`${error}\`\`\``);
+		}
 	}
 
 	public async sendMessage(message: string): Promise<void> {
