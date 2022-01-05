@@ -1,5 +1,5 @@
 import { WebhookClient } from 'discord.js';
-import { createBot } from 'mineflayer';
+import { chatPatternOptions, createBot } from 'mineflayer';
 import { createClient } from '@supabase/supabase-js';
 import consola from 'consola';
 import fs from 'fs/promises';
@@ -7,14 +7,15 @@ import path from 'path';
 
 import { Event } from '../interfaces/Event';
 import { EventEmitter } from 'stream';
+import regex from '../util/Regex';
 
 class Bot {
 	public static supabase = createClient(process.env.SUPABASE_URL as string, process.env.SUPABASE_KEY as string);
 
 	public logger = consola;
-	public chatHook;
-	public officerChatHook;
-	// public APIHook;
+	public chatHook = new WebhookClient({ url: process.env.MEMBER_WEBHOOK_URL as string });
+	public officerChatHook = new WebhookClient({ url: process.env.OFFICER_WEBHOOK_URL as string });
+	// public APIHook = new WebhookClient({ url: process.env.API_WEBHOOK_URL as string });
 	public devHook = new WebhookClient({ url: process.env.DEV_WEBHOOK_URL as string });
 	public onlineCount = 0;
 	public totalCount = 125;
@@ -25,13 +26,12 @@ class Bot {
 		version: '1.16.4',
 		logErrors: true,
 		hideErrors: false,
-		auth: 'microsoft',
+		auth: process.env.MINECRAFT_AUTH as 'microsoft' | 'mojang',
 		checkTimeoutInterval: 30000,
+		defaultChatPatterns: false,
 	});
 
-	constructor(chatHook: string, officerChatHook: string) {
-		this.chatHook = new WebhookClient({ url: chatHook });
-		this.officerChatHook = new WebhookClient({ url: officerChatHook });
+	constructor() {
 		this.start().catch(this.logger.error);
 	}
 
@@ -73,6 +73,20 @@ class Bot {
 				}
 			}
 		}
+
+		const options: chatPatternOptions = { repeat: true, parse: true };
+
+		this.mineflayer.addChatPattern('guildChat', regex.guildChat, options);
+		this.mineflayer.addChatPattern('joinLeave', regex.joinLeave, options);
+		this.mineflayer.addChatPattern('memberCount', regex.memberCount, options);
+		this.mineflayer.addChatPattern('memberJoin', regex.memberJoin, options);
+		this.mineflayer.addChatPattern('memberLeave', regex.memberLeave, options);
+		this.mineflayer.addChatPattern('memberKicked', regex.memberKicked, options);
+		this.mineflayer.addChatPattern('promotedDemoted', regex.promotedDemoted, options);
+		this.mineflayer.addChatPattern('guildLevelUp', regex.guildLevelUp, options);
+		this.mineflayer.addChatPattern('questTierComplete', regex.questTierComplete, options);
+		this.mineflayer.addChatPattern('questComplete', regex.questComplete, options);
+		this.mineflayer.addChatPattern('lobbyJoin', regex.lobbyJoin, options);
 	}
 
 	private async start() {
