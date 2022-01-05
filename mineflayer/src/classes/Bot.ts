@@ -25,7 +25,7 @@ class Bot {
 		version: '1.16.4',
 		logErrors: true,
 		hideErrors: false,
-		auth: 'microsoft',
+		auth: process.env.MINECRAFT_AUTH as string,
 		checkTimeoutInterval: 30000,
 		defaultChatPatterns: false,
 	});
