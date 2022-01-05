@@ -25,8 +25,8 @@ class Bot {
 		host: 'mc.hypixel.net',
 		version: '1.16.4',
 		logErrors: true,
-		hideErrors: true,
-		auth: process.env.MINECRAFT_AUTH as string,
+		hideErrors: false,
+		auth: process.env.MINECRAFT_AUTH as 'microsoft' | 'mojang',
 		checkTimeoutInterval: 30000,
 		defaultChatPatterns: false,
 	});
