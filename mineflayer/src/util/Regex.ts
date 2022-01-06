@@ -109,4 +109,9 @@ export default {
 	 */
 	lobbyJoin:
 		/^(?:\s>>>\s)?\[.*]\s[\w]{2,17} (?:joined the lobby!|spooked into the lobby!|slid into the lobby!)(?:\s<<<)?$/,
+
+	/**
+	 * When a nessage is sent repeatedly
+	 */
+	sameMessageTwice: /^You cannot say the same message twice!$/,
 };

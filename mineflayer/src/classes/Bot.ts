@@ -92,6 +92,7 @@ class Bot {
 		this.mineflayer.addChatPattern('questTierComplete', regex.questTierComplete, options);
 		this.mineflayer.addChatPattern('questComplete', regex.questComplete, options);
 		this.mineflayer.addChatPattern('lobbyJoin', regex.lobbyJoin, options);
+		this.mineflayer.addChatPattern('sameMessageTwice', regex.sameMessageTwice, options);
 	}
 
 	private async start() {
