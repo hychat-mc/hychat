@@ -10,7 +10,7 @@ export const run: Execute = async (bot, completedTier: number) => {
 		.setColor('BLUE')
 		.setTimestamp();
 
-	return bot.chatHook.send({
+	return await bot.chatHook.send({
 		embeds: [embed],
 	});
 };
