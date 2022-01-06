@@ -12,12 +12,12 @@ export default {
 	/**
 	 * member Message Emoji
 	 */
-	member: '<:grassblock:928483423616630844> ',
+	member: '<:grassblock:928483423616630844>',
 
 	/**
 	 * Officer Message Emoji
 	 */
-	officer: '<:diamond_sword:928484396577742948> ',
+	officer: '<:diamond_sword:928484396577742948>',
 
 	/**
 	 * VIP Rank
