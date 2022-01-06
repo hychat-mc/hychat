@@ -10,6 +10,16 @@ export default {
 	leave: '📤',
 
 	/**
+	 * member Message Emoji
+	 */
+	member: '<:grassblock:928483423616630844> ',
+
+	/**
+	 * Officer Message Emoji
+	 */
+	officer: '<:diamond_sword:928484396577742948> ',
+
+	/**
 	 * VIP Rank
 	 */
 	vip: {

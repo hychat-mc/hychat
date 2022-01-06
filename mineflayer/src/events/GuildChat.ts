@@ -2,6 +2,7 @@ import { Util } from 'discord.js';
 
 import { Execute } from '../interfaces/Event';
 import { ChatMessage } from 'prismarine-chat';
+import Emojis from '../util/Emojis';
 
 export const name = 'chat:guildChat';
 
@@ -19,5 +20,5 @@ export const run: Execute = async (bot, message: ChatMessage) => {
 	const formattedMessage = `${hypixelRank ?? ''}${playerName}${' ' + guildRank ?? ''}: ${Util.escapeMarkdown(
 		chatMessage,
 	)}`;
-	channel === 'Guild' ? await bot.chatHook.send(formattedMessage) : await bot.officerChatHook.send(formattedMessage);
+	channel === 'Guild' ? await bot.chatHook.send(Emojis.member + formattedMessage) : await bot.officerChatHook.send(Emojis.officer + formattedMessage);
 };
