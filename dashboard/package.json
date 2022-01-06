@@ -1,0 +1,29 @@
+{
+	"name": "hgb-dashboard",
+	"version": "1.0.0",
+	"main": "dist",
+	"author": "EvernoteMC/xMdb",
+	"license": "MIT",
+	"private": false,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "eslint \"src/**\"",
+		"lint:fix": "yarn lint --fix"
+	},
+	"dependencies": {
+		"@sentry/node": "^6.16.1",
+		"@sentry/tracing": "^6.16.1",
+		"@supabase/supabase-js": "^1.29.1",
+		"cors": "^2.8.5",
+		"fastify": "^3.25.3",
+		"limiter": "^2.1.0",
+		"next": "^12.0.7",
+		"next-seo": "^4.28.1",
+		"rate-limiter-flexible": "^2.3.6",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"swr": "^1.1.2"
+	}
+}
