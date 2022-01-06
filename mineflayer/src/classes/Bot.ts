@@ -1,6 +1,6 @@
 import { WebhookClient } from 'discord.js';
 import { chatPatternOptions, createBot } from 'mineflayer';
-import { createClient } from '@supabase/supabase-js';
+import { SupabaseClient } from '@supabase/supabase-js';
 import consola from 'consola';
 import fs from 'fs/promises';
 import path from 'path';
@@ -10,7 +10,7 @@ import { EventEmitter } from 'stream';
 import regex from '../util/Regex';
 
 class Bot {
-	public static supabase = createClient(process.env.SUPABASE_URL as string, process.env.SUPABASE_KEY as string);
+	public supabase = new SupabaseClient(process.env.SUPABASE_URL as string, process.env.SUPABASE_KEY as string);
 
 	public logger = consola;
 	public chatHook = new WebhookClient({ url: process.env.MEMBER_WEBHOOK_URL as string });
@@ -96,9 +96,22 @@ class Bot {
 		this.mineflayer.addChatPattern('sameMessageTwice', regex.sameMessageTwice, options);
 	}
 
+	private async setRealtime() {
+		// Set up table listener (users table)
+		const subscription = this.supabase
+			.from('TABLENAME')
+			.on('INSERT', (payload) => {
+				console.log('NEW INSERTION', payload);
+			})
+			.subscribe();
+
+		// await this.supabase.removeSubscription(subscription);
+	}
+
 	private async start() {
 		this.mineflayer.setMaxListeners(20);
 		await this.loadEvents('../events', this.mineflayer);
+		await this.setRealtime();
 	}
 }
 
