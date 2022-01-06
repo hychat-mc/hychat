@@ -109,4 +109,13 @@ export default {
 	 */
 	lobbyJoin:
 		/^(?:\s>>>\s)?\[.*]\s[\w]{2,17} (?:joined the lobby!|spooked into the lobby!|slid into the lobby!)(?:\s<<<)?$/,
+
+	/**
+	 * When a message is blocked for containing suspicious content
+	 *
+	 * Returns:
+	 *  - Comment blocked
+	 *  - Reason
+	 */
+	commentBlocked: /^We blocked your comment "(.+)" as it is breaking our rules because (.+)$/,
 };
