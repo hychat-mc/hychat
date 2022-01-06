@@ -93,6 +93,7 @@ class Bot {
 		this.mineflayer.addChatPattern('questComplete', regex.questComplete, options);
 		this.mineflayer.addChatPattern('lobbyJoin', regex.lobbyJoin, options);
 		this.mineflayer.addChatPattern('commentBlocked', regex.commentBlocked, options);
+		this.mineflayer.addChatPattern('sameMessageTwice', regex.sameMessageTwice, options);
 	}
 
 	private async start() {
