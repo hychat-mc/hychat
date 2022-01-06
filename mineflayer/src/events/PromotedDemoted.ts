@@ -1,3 +1,4 @@
+import { Util } from 'discord.js';
 import { Execute } from '../interfaces/Event';
 
 export const name = 'chat:promotedDemoted';
@@ -11,5 +12,9 @@ export const run: Execute = async (bot, message) => {
 	const guildRankFrom = messageArray[3] as string;
 	const guildRankTo = messageArray[4] as string;
 
-	await bot.chatHook.send(`${hypixelRank ?? ''}${playerName} was ${changeType} to ${guildRankTo} from ${guildRankFrom}!`);
+	await bot.chatHook.send(
+		`${hypixelRank ?? ''}${Util.escapeMarkdown(
+			playerName,
+		)} was ${changeType} to ${guildRankTo} from ${guildRankFrom}!`,
+	);
 };

@@ -17,8 +17,10 @@ export const run: Execute = async (bot, message: ChatMessage) => {
 
 	if (playerName === bot.mineflayer.username) return;
 
-	const formattedMessage = ` ${hypixelRank ?? ''}${playerName}${' ' + guildRank ?? ''}: ${Util.escapeMarkdown(
-		chatMessage,
-	)}`;
-	channel === 'Guild' ? await bot.chatHook.send(Emojis.member + formattedMessage) : await bot.officerChatHook.send(Emojis.officer + formattedMessage);
+	const formattedMessage = ` ${hypixelRank ?? ''}${Util.escapeMarkdown(playerName)}${
+		' ' + guildRank ?? ''
+	}: ${Util.escapeMarkdown(chatMessage)}`;
+	channel === 'Guild'
+		? await bot.chatHook.send(Emojis.member + formattedMessage)
+		: await bot.officerChatHook.send(Emojis.officer + formattedMessage);
 };

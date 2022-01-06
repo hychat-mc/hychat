@@ -1,3 +1,4 @@
+import { Util } from 'discord.js';
 import { Execute } from '../interfaces/Event';
 
 export const name = 'chat:memberKicked';
@@ -11,6 +12,8 @@ export const run: Execute = async (bot, message) => {
 	const kickedByPlayerName = messageArray[3] as string;
 
 	await bot.chatHook.send(
-		`${hypixelRank ?? ''}${playerName} was kicked by ${kickedByHypixelRank + ' ' ?? ''}${kickedByPlayerName}`,
+		`${hypixelRank ?? ''}${Util.escapeMarkdown(playerName)} was kicked by ${
+			kickedByHypixelRank + ' ' ?? ''
+		}${Util.escapeMarkdown(kickedByPlayerName)}`,
 	);
 };

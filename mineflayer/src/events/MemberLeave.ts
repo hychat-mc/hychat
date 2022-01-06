@@ -1,3 +1,4 @@
+import { Util } from 'discord.js';
 import { Execute } from '../interfaces/Event';
 
 export const name = 'chat:memberLeave';
@@ -8,5 +9,5 @@ export const run: Execute = async (bot, message) => {
 	const hypixelRank = messageArray[0] as string | null;
 	const playerName = messageArray[1] as string;
 
-	await bot.chatHook.send(`${hypixelRank ?? ''}${playerName} left the guild!`);
+	await bot.chatHook.send(`${hypixelRank ?? ''}${Util.escapeMarkdown(playerName)} left the guild!`);
 };
