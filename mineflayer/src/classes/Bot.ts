@@ -5,9 +5,10 @@ import consola from 'consola';
 import fs from 'fs/promises';
 import path from 'path';
 
-import { Event } from '../interfaces/Event';
 import { EventEmitter } from 'stream';
 import regex from '../util/Regex';
+import BadWords from '../util/BadWords';
+import { Event, MessageTable } from '../interfaces/Event';
 
 class Bot {
 	public supabase = new SupabaseClient(process.env.SUPABASE_URL as string, process.env.SUPABASE_KEY as string);
@@ -97,15 +98,14 @@ class Bot {
 	}
 
 	private async setRealtime() {
-		// Set up table listener (users table)
-		const subscription = this.supabase
-			.from('TABLENAME')
+		this.supabase
+			.from('messages')
 			.on('INSERT', (payload) => {
-				console.log('NEW INSERTION', payload);
+				const entry = payload.new as MessageTable;
+				if (entry.fromMineflayer || !BadWords.some((word) => entry.message.includes(word))) return;
+				entry.channel == 'Guild' ? this.chatHook.send(entry.message) : this.officerChatHook.send(entry.message);
 			})
 			.subscribe();
-
-		// await this.supabase.removeSubscription(subscription);
 	}
 
 	private async start() {
