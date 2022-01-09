@@ -1,14 +1,13 @@
 /*
 hypixel-guild-chat-ts
 
-Original Copyright Matthew G <46137770+xMdb@users.noreply.github.com> and contributors.
+Original Copyright 2022 Matt G<46137770+xMdb@users.noreply.github.com> and contributors.
 
 The following code is a derivative work of the code from the hypixel-guild-chat-bot project,
 which is licensed GPLv3. This code therefore is also licensed under the terms
 of the GNU Public License, version 3.
 
-Copyright 2021 EvernoteMC <evernoteminecraft@gmail.com>
-Edited by contributors: Matthew G <46137770+xMdb@users.noreply.github.com>
+Copyright 2022 EvernoteMC <evernoteminecraft@gmail.com> and contributors.
 */
 
 export default {
@@ -77,7 +76,7 @@ export default {
 	 * Returns:
 	 *  - Hypixel Rank
 	 *  - Player Name
-	 *  - promoted / demoted
+	 *  - Promoted / demoted
 	 *  - From Rank
 	 *  - To Rank
 	 */
@@ -111,7 +110,15 @@ export default {
 		/^(?:\s>>>\s)?\[.*]\s[\w]{2,17} (?:joined the lobby!|spooked into the lobby!|slid into the lobby!)(?:\s<<<)?$/,
 
 	/**
-	 * When a nessage is sent repeatedly
+	 * When a message is blocked for containing suspicious content
+	 *
+	 * Returns:
+	 *  - Comment blocked
+	 *  - Reason
+	 */
+	commentBlocked: /^We blocked your comment "(.+)" as it is breaking our rules because (.+)$/,
+  /**
+	 * When a message is sent repeatedly
 	 */
 	sameMessageTwice: /^You cannot say the same message twice!$/,
 };

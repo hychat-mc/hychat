@@ -1,16 +1,17 @@
 import { WebhookClient } from 'discord.js';
 import { chatPatternOptions, createBot } from 'mineflayer';
-import { createClient } from '@supabase/supabase-js';
+import { SupabaseClient } from '@supabase/supabase-js';
 import consola from 'consola';
 import fs from 'fs/promises';
 import path from 'path';
 
-import { Event } from '../interfaces/Event';
 import { EventEmitter } from 'stream';
 import regex from '../util/Regex';
+import BadWords from '../util/BadWords';
+import { Event, MessageTable } from '../interfaces/Event';
 
 class Bot {
-	public static supabase = createClient(process.env.SUPABASE_URL as string, process.env.SUPABASE_KEY as string);
+	public supabase = new SupabaseClient(process.env.SUPABASE_URL as string, process.env.SUPABASE_KEY as string);
 
 	public logger = consola;
 	public chatHook = new WebhookClient({ url: process.env.MEMBER_WEBHOOK_URL as string });
@@ -92,12 +93,25 @@ class Bot {
 		this.mineflayer.addChatPattern('questTierComplete', regex.questTierComplete, options);
 		this.mineflayer.addChatPattern('questComplete', regex.questComplete, options);
 		this.mineflayer.addChatPattern('lobbyJoin', regex.lobbyJoin, options);
+		this.mineflayer.addChatPattern('commentBlocked', regex.commentBlocked, options);
 		this.mineflayer.addChatPattern('sameMessageTwice', regex.sameMessageTwice, options);
+	}
+
+	private async setRealtime() {
+		this.supabase
+			.from('messages')
+			.on('INSERT', (payload) => {
+				const entry = payload.new as MessageTable;
+				if (entry.fromMineflayer || !BadWords.some((word) => entry.message.includes(word))) return;
+				entry.channel == 'Guild' ? this.chatHook.send(entry.message) : this.officerChatHook.send(entry.message);
+			})
+			.subscribe();
 	}
 
 	private async start() {
 		this.mineflayer.setMaxListeners(20);
 		await this.loadEvents('../events', this.mineflayer);
+		await this.setRealtime();
 	}
 }
 
