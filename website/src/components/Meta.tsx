@@ -2,15 +2,13 @@ import { NextSeo } from 'next-seo';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-import { config } from '../util/info';
-
-type IMetaProps = {
+interface MetaProps {
 	title: string;
 	description: string;
 	canonical?: string;
 };
 
-const Meta = (props: IMetaProps) => {
+const Meta = (props: MetaProps) => {
 	const router = useRouter();
 
 	return (
@@ -43,8 +41,8 @@ const Meta = (props: IMetaProps) => {
 					title: props.title,
 					description: props.description,
 					url: props.canonical,
-					locale: config.locale,
-					site_name: config.site_name,
+					locale: 'en_US',
+					site_name: "Easily create your Hypixel guild's new chat bot", // eslint-disable-line quotes
 				}}
 			/>
 		</>
