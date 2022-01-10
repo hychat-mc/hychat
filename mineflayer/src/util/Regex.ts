@@ -117,7 +117,7 @@ export default {
 	 *  - Reason
 	 */
 	commentBlocked: /^We blocked your comment "(.+)" as it is breaking our rules because (.+)$/,
-  /**
+	/**
 	 * When a message is sent repeatedly
 	 */
 	sameMessageTwice: /^You cannot say the same message twice!$/,
