@@ -1,4 +1,4 @@
-# Welcome to Hypixel Guild Chat Bot 2.0 (TS)
+# Welcome to Hychat
 
 This application is a WIP, and is the "2nd edition" to [Hypixel Guild Chat Bot](https://github.com/xMdb/hypixel-guild-chat-bot).
 
@@ -21,10 +21,6 @@ This application uses a Supabase (PostgreSQL) back-end and the components are me
 
 If you wish to use a simplier version, see [Hypixel Guild Chat Bot](https://github.com/xMdb/hypixel-guild-chat-bot).
 
-## Acknowledgements
-
-Thanks to [EvernoteMC](https://github.com/EvernoteMC) for allowing me to continue to work on this.
-
 ## License
 
-Hypixel Guild Chat Bot 2.0 (TS) is open-sourced software licensed under the [MIT license](https://choosealicense.com/licenses/mit/).
+Hychat is open-sourced software licensed under the [MIT license](https://choosealicense.com/licenses/mit/).

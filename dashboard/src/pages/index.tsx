@@ -3,7 +3,7 @@ import { Meta } from '../components/Meta';
 const Index = () => {
 	return (
 		<>
-			<Meta title="HGB Dashboard" description="Easily create your own Hypixel Guild Chat Bot." />
+			<Meta title="Hychat Dashboard" description="Manage your personal Hychat bot." />
 			<h1>Hello World</h1>
 		</>
 	);

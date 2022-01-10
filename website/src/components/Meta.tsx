@@ -6,7 +6,7 @@ interface MetaProps {
 	title: string;
 	description: string;
 	canonical?: string;
-};
+}
 
 const Meta = (props: MetaProps) => {
 	const router = useRouter();
@@ -42,7 +42,7 @@ const Meta = (props: MetaProps) => {
 					description: props.description,
 					url: props.canonical,
 					locale: 'en_US',
-					site_name: "Easily create your Hypixel guild's new chat bot", // eslint-disable-line quotes
+					site_name: "Hychat - Easily create your Hypixel guild's new chat bot", // eslint-disable-line quotes
 				}}
 			/>
 		</>
