@@ -1,6 +1,6 @@
 export const config = {
-	site_name: 'Bot Dashboard',
-	title: 'Mineflayer Bot Dashboard',
-	description: 'A dashboard that allows you to easily manage your Mineflayer bot',
+	site_name: 'Hychat Dashboard',
+	title: 'Hychat Dashboard',
+	description: 'Manage your personal Hychat bot.',
 	locale: 'en',
 };

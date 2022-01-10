@@ -13,10 +13,6 @@ This application is split into separate components and organized into folders. A
 - [⛏️ mineflayer: Hypixel Bot](https://github.com/xMdb/hypixel-guild-chat-ts/tree/master/mineflayer)
 - [ℹ️ website: Front-End Website](https://github.com/xMdb/hypixel-guild-chat-ts/tree/master/website)
 
-## Acknowledgements
-
-Thanks to [EvernoteMC](https://github.com/EvernoteMC) for allowing me to continue to work on this.
-
 ## License
 
-Hypixel Guild Chat Bot 2.0 (TS) is open-sourced software licensed under the [MIT license](https://choosealicense.com/licenses/mit/).
+Hychat is open-sourced software licensed under the [MIT license](https://choosealicense.com/licenses/mit/).

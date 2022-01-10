@@ -1,8 +1,8 @@
 {
-	"name": "hgb-mineflayer",
+	"name": "hychat-mineflayer",
 	"version": "1.0.0",
 	"main": "dist",
-	"author": "EvernoteMC/xMdb",
+	"author": "Hychat",
 	"license": "MIT",
 	"private": false,
 	"scripts": {

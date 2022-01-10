@@ -1,4 +1,4 @@
-import { Link as ChakraLink, Text, Code, Container, Flex, VStack } from '@chakra-ui/react';
+import { Text, Container, Flex, VStack } from '@chakra-ui/react';
 import { NextPage } from 'next';
 
 const Index: NextPage = () => {
@@ -7,14 +7,9 @@ const Index: NextPage = () => {
 			<Flex h="100vh">
 				<VStack>
 					<Text fontSize="xl" fontWeight="bold">
-						Hello Next.js
+						Welcome to Hychat.
 					</Text>
-					<Text fontSize="lg">
-						This is a simple example of a Next.js page. You can find the source code of this page at{' '}
-						<ChakraLink href="https://github.com">
-							<Code>https://github.com</Code> :)
-						</ChakraLink>
-					</Text>
+					<Text fontSize="lg">This is a work in progress! Check back soon for more features!</Text>
 				</VStack>
 			</Flex>
 		</Container>
