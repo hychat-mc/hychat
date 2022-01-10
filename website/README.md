@@ -1,17 +1,17 @@
-# Dashboard UI & API
+# Website
 
 > This component is a work in progress! 
 
-The dashboard uses Next.js and Chakra UI to create an interactive dashboard to manage Hypixel bot(s) and view chat logs. It also fetches messages from a back-end using an API (found in `src/pages/api`).
+The website is made with Next.js and Chakra UI.
 
 ## Workspace Layout
 
 This application is split into separate components and organized into folders. A list of folders can be found below:
 
-- [~~🖥️ dashboard: Dashboard UI & API~~](https://github.com/xMdb/hypixel-guild-chat-ts/tree/master/dashboard)
+- [🖥️ dashboard: Dashboard UI & API](https://github.com/xMdb/hypixel-guild-chat-ts/tree/master/dashboard)
 - [🤖 discord: Discord Bot](https://github.com/xMdb/hypixel-guild-chat-ts/tree/master/discord)
 - [⛏️ mineflayer: Hypixel Bot](https://github.com/xMdb/hypixel-guild-chat-ts/tree/master/mineflayer)
-- [ℹ️ website: Front-End Website](https://github.com/xMdb/hypixel-guild-chat-ts/tree/master/website)
+- [~~ℹ️ website: Front-End Website~~](https://github.com/xMdb/hypixel-guild-chat-ts/tree/master/website)
 
 ## Acknowledgements
 
