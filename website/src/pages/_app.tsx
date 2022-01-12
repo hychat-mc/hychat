@@ -1,6 +1,7 @@
+import '@fontsource/inter';
+
 import { ChakraProvider, ColorModeProvider } from '@chakra-ui/react';
 import { AppProps } from 'next/app';
-
 import theme from '../theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -8,7 +9,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 		<ChakraProvider resetCSS theme={theme}>
 			<ColorModeProvider
 				options={{
-					useSystemColorMode: true,
+					useSystemColorMode: false,
+					initialColorMode: 'dark',
 				}}>
 				<Component {...pageProps} />
 			</ColorModeProvider>

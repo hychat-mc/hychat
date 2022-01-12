@@ -1,18 +1,16 @@
-import { Text, Container, Flex, VStack } from '@chakra-ui/react';
+import { VStack } from '@chakra-ui/react';
 import { NextPage } from 'next';
+import { Nav } from '../components/Nav';
+import { Hero } from '../components/Hero';
 
 const Index: NextPage = () => {
 	return (
-		<Container>
-			<Flex h="100vh">
-				<VStack>
-					<Text fontSize="xl" fontWeight="bold">
-						Welcome to Hychat.
-					</Text>
-					<Text fontSize="lg">This is a work in progress! Check back soon for more features!</Text>
-				</VStack>
-			</Flex>
-		</Container>
+		<>
+			<Nav />
+			<VStack w="full" h="full" py={[2, 4, 6, 8]} px={196} spacing={6} align="flex-start">
+				<Hero />
+			</VStack>
+		</>
 	);
 };
 

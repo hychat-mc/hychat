@@ -8,7 +8,7 @@ interface MetaProps {
 	canonical?: string;
 }
 
-const Meta = (props: MetaProps) => {
+export const Meta = (props: MetaProps) => {
 	const router = useRouter();
 
 	return (
@@ -48,5 +48,3 @@ const Meta = (props: MetaProps) => {
 		</>
 	);
 };
-
-export { Meta };
