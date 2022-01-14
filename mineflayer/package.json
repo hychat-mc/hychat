@@ -14,7 +14,6 @@
 		"start": "node ."
 	},
 	"dependencies": {
-		"@supabase/supabase-js": "^1.29.1",
 		"consola": "^2.15.3",
 		"discord.js": "^13.5.1",
 		"dotenv": "^10.0.0",
