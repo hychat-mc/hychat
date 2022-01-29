@@ -23,7 +23,7 @@
 		"fastify": "^3.25.3",
 		"framer-motion": "5",
 		"limiter": "^2.1.0",
-		"next": "^12.0.7",
+		"next": "^12.0.9",
 		"next-seo": "^4.28.1",
 		"rate-limiter-flexible": "^2.3.6",
 		"react": "^17.0.2",
