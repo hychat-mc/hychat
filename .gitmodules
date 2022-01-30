@@ -4,3 +4,6 @@
 [submodule "mineflayer"]
 	path = mineflayer
 	url = https://github.com/hychat-mc/mineflayer
+[submodule "discord"]
+	path = discord
+	url = https://github.com/hychat-mc/discord
