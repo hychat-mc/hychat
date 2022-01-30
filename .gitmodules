@@ -1,3 +1,6 @@
 [submodule "website"]
 	path = website
 	url = https://github.com/hychat-mc/website
+[submodule "mineflayer"]
+	path = mineflayer
+	url = https://github.com/hychat-mc/mineflayer
