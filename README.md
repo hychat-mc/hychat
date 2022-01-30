@@ -1,7 +1,7 @@
 <br />
 <p align="center">
-  <a href="https://discord.gg/hk">
-    <img src="https://raw.githubusercontent.com/hychat-mc/hychat/master/.github/assets/img/hychat-logo.png" alt="Hychat" width="160" height="80">
+  <a href="https://hych.at">
+    <img src="https://raw.githubusercontent.com/hychat-mc/hychat/master/.github/assets/img/hychat-logo.png" alt="Hychat" width="200" height="170">
   </a>
 </p>
   <h1 align="center">Hychat</h1>
