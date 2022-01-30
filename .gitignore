@@ -27,3 +27,13 @@
 .env.test.local
 .env.production.local
 .env
+
+# (hychat mono) developer files
+# this is because these files already
+# exist in each project
+yarn.lock
+package.json
+.prettierrc
+.nvmrc
+.eslintrc
+.eslintignore
