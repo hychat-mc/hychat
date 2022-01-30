@@ -27,7 +27,7 @@ Welcome! Hychat is **the** guild chat bridge to end all other guild chat bridges
 
 ## Huh? What's Hychat?
 
-It is common for each top Hypixel guild to have their own developer who makes yet *another* guild chat bridge. Not all guild bridges are created equally. Some might be basic or be fully featured. We aim to create a unified experience for all guilds, so that **everyone can enjoy the same great experience**. This will include bot management via a web interface, full customization, reliable infrastructure, and a whole lot more.
+If you own or are in a top Hypixel guild, it is basically essential nowadays for your guild to have a guild chat bridge. That's why it's common for each guild to have their own developer who makes yet *another* guild chat bridge. Not all guild bridges are created equally. Some might be basic or be fully featured. We aim to create a unified experience for all guilds, so that **everyone can enjoy the same great experience**. This will include bot management via a web interface, full customization, reliable infrastructure, and a whole lot more.
 
 ## Wait, what's a guild chat bridge?
 
@@ -37,10 +37,10 @@ These bridges (or bots) are usually created with two libraries; Mineflayer and D
 
 ## Ok, cool, but who's making it?
 
-Our current team consists of a few developers who've all created their own version of a guild chat bridge in either JavaScript or Python. We've combined our knowledge of Minecraft/Hypixel bots and our developer experiences to create Hychat. These people include:
+Our current team consists of a few developers who've all created their own version of a guild chat bridge in either JavaScript or Python. They are each being used in some of the top guilds on Hypixel. We've combined our knowledge of Minecraft/Hypixel bots and our developer experiences to create Hychat. These people include:
 
 - [xMdb](https://github.com/xMdb), creator of [Hypixel Guild Chat Bot](https://github.com/xMdb/hypixel-guild-chat-bot), used in [Hypixel Knights](https://discord.gg/hk) (#16) and others
-- [Evernote](https://github.com/EvernoteMC), creator of [Hypixel Guild Chat Py](https://github.com/EvernoteMC/hypixel-guild-chat-py), used in [Infamy](https://hypixel.net/threads/832779/) (#60) and others
+- [Evernote](https://github.com/EvernoteMC), creator of [Hypixel Guild Chat Py](https://github.com/EvernoteMC/hypixel-guild-chat-py), used in [The Illumination](https://hypixel.net/guild/The%20Illumination/members) (#35), [Infamy](https://hypixel.net/threads/832779/) (#60), and others
 - [Jejebecarte](https://github.com/Jejebecarte), creator of [MiscGuild's BridgeBot](https://github.com/MiscGuild/BridgeBot), used in [Miscellaneous](https://miscguild.xyz/) (#18) and others
 
 > If you've made your own guild chat bridge before and would like to contribute, contact us through [our Twitter](https://twitter.com/hychatmc) or via email at *hychat [at] hych.at*.
