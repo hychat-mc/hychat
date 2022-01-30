@@ -29,6 +29,12 @@ Welcome! Hychat is **the** guild chat bridge to end all other guild chat bridges
 
 It is common for each top Hypixel guild to have their own developer who makes yet *another* guild chat bridge. Not all guild bridges are created equally. Some might be basic or be fully featured. We aim to create a unified experience for all guilds, so that **everyone can enjoy the same great experience**. This will include bot management via a web interface, full customization, reliable infrastructure, and a whole lot more.
 
+## Wait, what's a guild chat bridge?
+
+A guild chat bridge (or a guild chat bot) allows a link to be established between a Discord channel and Hypixel guild chat. It is commonly used to allow guild members to communicate with each other, even if they aren't at their computer. This is because Discord can be used anywhere with an internet connection, whilst Hypixel guild chat is only available in-game. This can allow for more efficient communication and more community engagement.
+
+These bridges (or bots) are usually created with two libraries; Mineflayer and Discord.js. Mineflayer allows a Minecraft account to be controlled using code, and Discord.js can send and receive message events to/from Discord.
+
 ## Ok, cool, but who's making it?
 
 Our current team consists of a few developers who've all created their own version of a guild chat bridge in either JavaScript or Python. We've combined our knowledge of Minecraft/Hypixel bots and our developer experiences to create Hychat. These people include:
@@ -39,7 +45,7 @@ Our current team consists of a few developers who've all created their own versi
 
 > If you've made your own guild chat bridge before and would like to contribute, contact us through [our Twitter](https://twitter.com/hychatmc) or via email at *hychat [at] hych.at*.
 
-## Features
+## What features are there?
 
 - **Most (if not all) of the features of the original [Hypixel Guild Chat Bot](https://github.com/xMdb/hypixel-guild-chat-bot) re-implemented to be more efficient and easier to use.**
   - Includes the guild chat bridge (sends all guild messages), logs guild joins and leaves, and automatic recovery.
@@ -48,14 +54,20 @@ Our current team consists of a few developers who've all created their own versi
 - Manage your guild via commands or the dashboard.
 - **More to be announced!**
 
-## How Does It Work?
+## How does it work?
 
-We combine multiple components written in TypeScript such as the backend, Mineflayer bot(s), Discord bot, and web interface, to 
+We combine multiple components written in TypeScript such as the backend, Mineflayer bot(s), Discord bot, and web interface, to allow easy deployment of your own bot.
 
 ## Who's it for?
 
 This application is for anyone! As long as you have a spare **premium** Minecraft account that can be used to play on Hypixel, you can create your bot in no time!
 
-## License
+## Nice! Where do I sign up?
+
+We are working hard to make Hychat available to everyone, as it is currently in early alpha. Sign-ups are not yet available. Our current ETA is sometime in April this year. Please make sure you keep track of our progress through our [Twitter](https://twitter.com/hychatmc)!
+
+<hr />
+
+## License Statement
 
 Hychat and all of its components are open-sourced software licensed under the [MIT license](https://choosealicense.com/licenses/mit/).
