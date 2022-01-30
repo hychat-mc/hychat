@@ -7,3 +7,6 @@
 [submodule "discord"]
 	path = discord
 	url = https://github.com/hychat-mc/discord
+[submodule "dashboard"]
+	path = dashboard
+	url = https://github.com/hychat-mc/dashboard.git
