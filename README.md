@@ -11,8 +11,8 @@
     <br />
 <p align="center">
   <img alt="License" src="https://img.shields.io/github/license/hychat-mc/hychat?color=GREEN&style=for-the-badge">
-  <img alt="Stars" src="https://img.shields.io/github/stars/hychat-mc?color=GREEN&style=for-the-badge">
-  <img alt="Lines of Code" src="https://img.shields.io/twitter/follow/hychatmc?color=GREEN&style=for-the-badge">
+  <img alt="Org Stars" src="https://img.shields.io/github/stars/hychat-mc?color=GREEN&style=for-the-badge">
+  <a href="https://twitter.com/hychatmc"><img alt="Twitter" src="https://img.shields.io/twitter/follow/hychatmc?color=GREEN&style=for-the-badge"></a>
 </p>
 
   <p align="center">
