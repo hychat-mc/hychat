@@ -10,3 +10,6 @@
 [submodule "dashboard"]
 	path = dashboard
 	url = https://github.com/hychat-mc/dashboard.git
+[submodule "backend"]
+	path = backend
+	url = https://github.com/hychat-mc/backend.git
