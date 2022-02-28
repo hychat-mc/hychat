@@ -1,15 +1,20 @@
 [submodule "website"]
 	path = website
 	url = https://github.com/hychat-mc/website
+	branch = master
 [submodule "mineflayer"]
 	path = mineflayer
 	url = https://github.com/hychat-mc/mineflayer
+	branch = master
 [submodule "discord"]
 	path = discord
 	url = https://github.com/hychat-mc/discord
+	branch = master
 [submodule "dashboard"]
 	path = dashboard
 	url = https://github.com/hychat-mc/dashboard.git
+	branch = master
 [submodule "backend"]
 	path = backend
 	url = https://github.com/hychat-mc/backend.git
+	branch = master
