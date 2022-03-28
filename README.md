@@ -23,6 +23,13 @@
 
 > ⚠️ **Hychat is currently in early alpha and in active development. It currently is non-functional and not recommended for use.**
 
+### 🚨 March Development Update
+
+Hello! We are currently working on a smaller version of Hychat, as other events have gotten in the way of our goal. Hychat is a very ambitious project, and is no small feat. This means our planned release of April is not realistic at this time. 2/3 of our team is also working on Observer
+, as well as other real-life commitments. Our smaller (self-host only) bot will become public once completed, as it is just a rewrite. Thanks everyone for your support.
+
+<hr />
+
 Welcome! Hychat is **the** guild chat bridge to end all other guild chat bridges.
 
 ## Huh? What's Hychat?
@@ -64,7 +71,7 @@ This application is for anyone! As long as you have a spare **premium** Minecraf
 
 ## Nice! Where do I sign up?
 
-We are working hard to make Hychat available to everyone, as it is currently in early alpha. Sign-ups are not yet available. Our current ETA is sometime in April this year. Please make sure you keep track of our progress through our [Twitter](https://twitter.com/hychatmc)!
+We are working hard to make Hychat available to everyone. Sign-ups are not yet available. Our current ETA is sometime in December 2022. Please make sure you keep track of our progress through our [Twitter](https://twitter.com/hychatmc) and at the top of this page [here](#hychat).
 
 <hr />
 
