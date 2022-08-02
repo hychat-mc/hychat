@@ -21,12 +21,17 @@
         <a href="https://hych.at">Visit our website</a>
   </p>
 
-> ⚠️ **Hychat is currently in early alpha and in active development. It currently is non-functional and not recommended for use.**
+# The Death of Hychat
 
-### 🚨 March Development Update
+It wasn't alive in the first place! If you don't care about the reasons, the upgrade you are looking for is MiscGuild's bridge bot, which is a fork of where Hychat was standing. Please see more here: https://github.com/MiscGuild/bridge
 
-Hello! We are currently working on a smaller version of Hychat, as other events have gotten in the way of our goal. Hychat is a very ambitious project, and is no small feat. This means our planned release of April is not realistic at this time. 2/3 of our team is also working on Observer
-, as well as other real-life commitments. Our smaller (self-host only) bot will become public once completed, as it is just a rewrite. Thanks everyone for your support.
+The story: Basically, we had large ambitions for Hychat. We wanted to see it succeed and grow into a business. It turns out that it is really hard to do that, and very time consuming. Time for me (xMdb) is valuable because I have many, *many* real-life commitments. The others devs also are going through with their own education and life stuff. As a result, we abandoned the project before it really started. 
+
+Please ignore everything below, it's just for archival reasons.
+
+If you supported and were hyped for us, thank you :) Hopefully you can put that energy (and money!) into other open-source projects.
+
+- Matt (xMdb)
 
 <hr />
 
